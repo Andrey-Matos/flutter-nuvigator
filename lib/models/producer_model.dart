@@ -5,22 +5,20 @@ class Producer {
   String distance;
   List packages;
 
-  Producer({
-    this.name,
-    this.description,
-    this.logo,
-    this.distance,
-    this.packages
-  });
+  Producer(
+      {required this.name,
+      required this.description,
+      required this.logo,
+      required this.distance,
+      required this.packages});
 
-  factory Producer.fromJson(Map<String, dynamic> parsedJson){
-
+  factory Producer.fromJson(Map<String, dynamic> parsedJson) {
     return Producer(
       name: parsedJson['name'],
-      logo : parsedJson['logo'],
-      description : parsedJson['description'],
-      distance : parsedJson['distance'],
-      packages : parsedJson['packages'],
+      logo: parsedJson['logo'],
+      description: parsedJson['description'],
+      distance: parsedJson['distance'],
+      packages: parsedJson['packages'],
     );
   }
 }
