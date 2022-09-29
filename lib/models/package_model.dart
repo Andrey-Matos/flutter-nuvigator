@@ -4,11 +4,7 @@ class Package {
   List items;
   String price;
 
-  Package(
-      {required this.title,
-      required this.description,
-      required this.items,
-      required this.price});
+  Package({this.title, this.description, this.items, this.price});
 
   factory Package.fromJson(Map<String, dynamic> parsedJson) {
     return Package(

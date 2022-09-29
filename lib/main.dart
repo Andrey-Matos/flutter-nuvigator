@@ -7,10 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
-  Widget build(BuildContext context)  {
-
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -19,6 +17,3 @@ class MyApp extends StatelessWidget {
       home: Nuvigator(
         router: MyRouter(),
       ),
-    );
-  }
-}
