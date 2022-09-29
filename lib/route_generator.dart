@@ -37,9 +37,12 @@ class RouteGenerator {
         return _erroRoute();
 
       case 'package-details':
-        if (args is Package) {
+        if (args is Map) {
           return MaterialPageRoute(
-            builder: (_) => PackageDetailsScreen(package: args),
+            builder: (_) => PackageDetailsScreen(
+              package: args['package'],
+              producer: args['producer'],
+            ),
           );
         }
         return _erroRoute();
