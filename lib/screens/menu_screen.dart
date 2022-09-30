@@ -5,10 +5,8 @@ import 'package:proj/components/orgs_rate_app.dart';
 import 'package:proj/core/app_colors.dart';
 
 class MenuScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
     final nuvigator = Nuvigator.of(context);
 
     return Scaffold(
@@ -23,8 +21,7 @@ class MenuScreen extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w700,
-                    color: AppColors.darkGrey
-                ),
+                    color: AppColors.darkGrey),
               ),
               SizedBox(height: 20),
               OrgsRateApp(),
@@ -33,7 +30,6 @@ class MenuScreen extends StatelessWidget {
                 text: 'Início',
                 icon: Icons.home,
                 action: () => nuvigator.open('home'),
-
               ),
               Divider(),
               OrgsMenuCard(
@@ -45,7 +41,7 @@ class MenuScreen extends StatelessWidget {
               OrgsMenuCard(
                 text: 'Perfil',
                 icon: Icons.person,
-                action: () => nuvigator.open('profile'),
+                action: () => nuvigator.open('myapp://profile'),
               ),
               Divider(),
               OrgsMenuCard(
@@ -57,10 +53,8 @@ class MenuScreen extends StatelessWidget {
               OrgsMenuCard(
                 text: 'Sair',
                 icon: Icons.logout,
-                action: () => Navigator.of(context).pushNamedAndRemoveUntil(
-                    'login',
-                        (route) => false
-                ),
+                action: () => Navigator.of(context)
+                    .pushNamedAndRemoveUntil('login', (route) => false),
               ),
               SizedBox(height: 30),
             ],
